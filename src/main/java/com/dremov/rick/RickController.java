@@ -1,15 +1,15 @@
 package com.dremov.rick;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 public class RickController {
 
   @GetMapping("/greeting")
-  public String getGreeting() {
-    return "";
+  public ResponseEntity<String> getGreeting() {
+    return ResponseEntity.ok("Hey Morty");
   }
 
 }
