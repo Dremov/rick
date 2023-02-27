@@ -12,4 +12,9 @@ public class RickController {
     return ResponseEntity.ok("Hey Morty");
   }
 
+  @GetMapping("/test-endpoint")
+  public String getTest() {
+    return "This is a test endpoint";
+  }
+
 }
